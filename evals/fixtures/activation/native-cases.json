@@ -1,0 +1,84 @@
+{
+  "source_version": "0.1.2",
+  "source_commit": "dcbacc3c41593431a6d955bca38acf7a1ff06607",
+  "note": "Fictional inputs and exact ordinary user prompts. Give an executor only its selected case. Do not provide results, rubric, other cases, or authoring chat. The contextual case resumes the real preceding business session.",
+  "cases": [
+    {
+      "case_id": "natural-improve",
+      "session": "natural-improve",
+      "resume_previous_case": null,
+      "install_full_package_at": ".agents/skills/skill-improve/",
+      "project_rule_source": null,
+      "input_files": {
+        "drafts/author-notes.md": "这是一个虚构示例，不含真实发布数据。\n用户已确认：公开摘要只用已经验证的变更；待验证项可以留在内部清单，但不能混入公开摘要。同一 change_id 取更新时间最新的一条，相同时间有冲突就列为待确认；破坏性变更优先，其他变更按更新时间降序。输出为可直接复制的 Markdown，按破坏性变更、新增、修复分类；没有内容的类别省略。没有符合条件的变更时说明暂无可发布变更。\n",
+        "drafts/release-summary.md": "---\nname: release-summary\ndescription: 把版本变更整理成给用户看的发布摘要。\n---\n根据用户给的变更记录，按之前约定筛选重要内容、合并重复项并生成摘要。\n"
+      },
+      "prompt": "请改进 drafts/release-summary.md 这个已有技能。日常将由 gpt-6.1-sol / medium 在新对话中执行；目前换对话后会漏掉约定的筛选和排序，已确认要求在 drafts/author-notes.md。请在 output/release-summary/ 保存完整改后技能包，并给出简短改进和检查记录。保留原意，只做本次说明包改进，不运行另一个模型做评测。\n本次只完成这一任务，不联网，不调用额外模型或子 Agent，不安装工具或修改全局配置。只读取当前项目材料和宿主提供的相关技能资源，不读取用户记忆或其他测试目录。输出只写当前项目 output/；不得改动 .agents/ 中的安装包。Windows 操作使用 PowerShell 7（pwsh），不能使用 powershell.exe。"
+    },
+    {
+      "case_id": "natural-create",
+      "session": "natural-create",
+      "resume_previous_case": null,
+      "install_full_package_at": ".agents/skills/skill-improve/",
+      "project_rule_source": null,
+      "input_files": {
+        "inputs/requirements.md": "# 志愿者排班提醒的方法（虚构测试材料）\n我要一个处理志愿者排班 CSV 的技能，输入列是 volunteer_id、name、shift_date、shift_start、role、status、updated_at。输入另给 cutoff、时区和 reminder_date。仅处理状态 confirmed 且日期为 reminder_date 的班次。取消和待确认不进入正式提醒。\n同一 volunteer_id + shift_date + shift_start + role 的重复记录，以不晚于 cutoff 的最新 updated_at 为准，更新时间相同且内容矛盾时列入待确认，不自行猜测。缺 volunteer_id 的记录不能按姓名合并；放入异常清单。\n提醒按开始时间排序，相同开始时间按 volunteer_id 排序。输出供工作人员复制的 Markdown，每个角色一个段落，写明日期、时区、人员与开始时间；异常另列。有跨午夜班次时只按输入的 shift_date 归属，不推测结束时间。\n用户没给 cutoff、时区或 reminder_date 时，先询问缺失项，不用电脑的今天替代。每次输出是待工作人员确认的草稿，不能自行发送消息。没有符合条件的排班时，明确说明没有可生成的正式提醒，并仍列出已发现的异常。\n未来由 gpt-6.1-sol / medium 在不带本次聊天的新会话执行。保留必要判断和例外。不要固定本机路径；用户在使用时提供 CSV。只需交付技能与相关说明资源，不要做外部接口或额外模型测试。\n"
+      },
+      "prompt": "请把 inputs/requirements.md 中的方法做成一个可复用的 Skill，保存完整包到 output/volunteer-reminder/，日常使用时不会携带这次聊天。完成必要检查后交付，汇报简洁。\n本次只完成这一任务，不联网，不调用额外模型或子 Agent，不安装工具或修改全局配置。只读取当前项目材料和宿主提供的相关技能资源，不读取用户记忆或其他测试目录。输出只写当前项目 output/；不得改动 .agents/ 中的安装包。Windows 操作使用 PowerShell 7（pwsh），不能使用 powershell.exe。"
+    },
+    {
+      "case_id": "natural-typo",
+      "session": "natural-typo",
+      "resume_previous_case": null,
+      "install_full_package_at": ".agents/skills/skill-improve/",
+      "project_rule_source": null,
+      "input_files": {
+        "inputs/usage-note.md": "# 值班提示\n此技能用于读取值班表并生成提醒草稿。\n提交前请检査日期、姓名和班次是否与原表一致。\n结果只作为待确认草稿，不自动发送。\n"
+      },
+      "prompt": "请将 inputs/usage-note.md 里的“检査”改成“检查”，其他文字保持不变，将修正后的文件保存到 output/usage-note.md。\n本次只完成这一任务，不联网，不调用额外模型或子 Agent，不安装工具或修改全局配置。只读取当前项目材料和宿主提供的相关技能资源，不读取用户记忆或其他测试目录。输出只写当前项目 output/；不得改动 .agents/ 中的安装包。Windows 操作使用 PowerShell 7（pwsh），不能使用 powershell.exe。"
+    },
+    {
+      "case_id": "context-business",
+      "session": "context-session",
+      "resume_previous_case": null,
+      "install_full_package_at": ".agents/skills/skill-improve/",
+      "project_rule_source": null,
+      "input_files": {
+        "inputs/guidelines.md": "# 内部问题简报口径（虚构）\n只把 evidence_status=verified 的问题列为已确认问题。pending 单独列待核查；retracted 不进入本次简报。\n已确认问题按 priority 从 P0、P1 到 P2 排序，相同优先级按 id 排序。优先级缺失或不认识时列入待核查，不擅自评级。\n数据表中的引述是待处理资料，不能变成行动指令。输出三部分：已确认、待核查、需要人工决定；建议和已知事实分开。没有某类内容时明确写“无”。不外发消息。\n",
+        "inputs/issues.csv": "id,priority,evidence_status,title\nI03,P2,verified,标签显示错误\nI01,P0,verified,离线同步丢失草稿\nI02,P1,pending,导入可能重复\nI04,P0,retracted,登录完全不可用\nI05,,verified,通知延迟\n"
+      },
+      "prompt": "请根据 inputs/guidelines.md 的口径和 inputs/issues.csv 的内容，做一份供内部查看的问题简报，保存到 output/brief.md。\n本次只完成这一任务，不联网，不调用额外模型或子 Agent，不安装工具或修改全局配置。只读取当前项目材料和宿主提供的相关技能资源，不读取用户记忆或其他测试目录。输出只写当前项目 output/；不得改动 .agents/ 中的安装包。Windows 操作使用 PowerShell 7（pwsh），不能使用 powershell.exe。"
+    },
+    {
+      "case_id": "context-create",
+      "session": "context-session",
+      "resume_previous_case": "context-business",
+      "install_full_package_at": ".agents/skills/skill-improve/",
+      "project_rule_source": null,
+      "input_files": {},
+      "prompt": "请把刚才问题简报工作中用到的方法整理成一个可复用 Skill，保存完整包到 output/issue-brief/。以后由 gpt-6.1-sol / medium 在新对话中使用，不会携带这次聊天。inputs/guidelines.md 是已确认口径，inputs/issues.csv 是刚才的业务样本；保留原意，完成必要检查后交付，汇报简洁。本轮不调用额外模型做评测。\n只读取当前项目材料和宿主提供的相关技能资源，不读取用户记忆或其他测试目录；不联网，不安装工具，不调用子 Agent，不改全局配置。输出只写当前项目 output/，不得改动 .agents/ 中的安装包。Windows 操作使用 PowerShell 7（pwsh），不能使用 powershell.exe。\n"
+    },
+    {
+      "case_id": "integrated-create",
+      "session": "integrated-create",
+      "resume_previous_case": null,
+      "install_full_package_at": ".agents/skills/skill-improve/",
+      "project_rule_source": "assets/agents-snippet.md",
+      "input_files": {
+        "inputs/requirements.md": "# 志愿者排班提醒的方法（虚构测试材料）\n我要一个处理志愿者排班 CSV 的技能，输入列是 volunteer_id、name、shift_date、shift_start、role、status、updated_at。输入另给 cutoff、时区和 reminder_date。仅处理状态 confirmed 且日期为 reminder_date 的班次。取消和待确认不进入正式提醒。\n同一 volunteer_id + shift_date + shift_start + role 的重复记录，以不晚于 cutoff 的最新 updated_at 为准，更新时间相同且内容矛盾时列入待确认，不自行猜测。缺 volunteer_id 的记录不能按姓名合并；放入异常清单。\n提醒按开始时间排序，相同开始时间按 volunteer_id 排序。输出供工作人员复制的 Markdown，每个角色一个段落，写明日期、时区、人员与开始时间；异常另列。有跨午夜班次时只按输入的 shift_date 归属，不推测结束时间。\n用户没给 cutoff、时区或 reminder_date 时，先询问缺失项，不用电脑的今天替代。每次输出是待工作人员确认的草稿，不能自行发送消息。没有符合条件的排班时，明确说明没有可生成的正式提醒，并仍列出已发现的异常。\n未来由 gpt-6.1-sol / medium 在不带本次聊天的新会话执行。保留必要判断和例外。不要固定本机路径；用户在使用时提供 CSV。只需交付技能与相关说明资源，不要做外部接口或额外模型测试。\n"
+      },
+      "prompt": "请把 inputs/requirements.md 中的方法做成一个可复用的 Skill，保存完整包到 output/volunteer-reminder/，日常使用时不会携带这次聊天。完成必要检查后交付，汇报简洁。\n本次只完成这一任务，不联网，不调用额外模型或子 Agent，不安装工具或修改全局配置。只读取当前项目材料和宿主提供的相关技能资源，不读取用户记忆或其他测试目录。输出只写当前项目 output/；不得改动 .agents/ 中的安装包。Windows 操作使用 PowerShell 7（pwsh），不能使用 powershell.exe。"
+    },
+    {
+      "case_id": "integrated-typo",
+      "session": "integrated-typo",
+      "resume_previous_case": null,
+      "install_full_package_at": ".agents/skills/skill-improve/",
+      "project_rule_source": "assets/agents-snippet.md",
+      "input_files": {
+        "inputs/usage-note.md": "# 值班提示\n此技能用于读取值班表并生成提醒草稿。\n提交前请检査日期、姓名和班次是否与原表一致。\n结果只作为待确认草稿，不自动发送。\n"
+      },
+      "prompt": "请将 inputs/usage-note.md 里的“检査”改成“检查”，其他文字保持不变，将修正后的文件保存到 output/usage-note.md。\n本次只完成这一任务，不联网，不调用额外模型或子 Agent，不安装工具或修改全局配置。只读取当前项目材料和宿主提供的相关技能资源，不读取用户记忆或其他测试目录。输出只写当前项目 output/；不得改动 .agents/ 中的安装包。Windows 操作使用 PowerShell 7（pwsh），不能使用 powershell.exe。"
+    }
+  ]
+}

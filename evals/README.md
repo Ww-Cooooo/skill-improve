@@ -55,3 +55,21 @@
 ## 0.1.2 的宿主发现尝试
 
 [正常请求与虚构材料](fixtures/activation/host-request.json) 和 [实际事件摘录](results/host-discovery.md) 保留了一次没有点名 Skill Improve 的真实 Codex CLI 运行。Agent 出现主动选择和尝试读取，但只读命令被环境策略阻止；完整调用未通过。复现时分开提供输入与结果，按实际观察记录阻碍，不把结束事件当作成功。
+
+## 0.1.2 的完整自动调用检查
+
+后续完成七个任务回合、六个会话，覆盖普通创建、实质改进、同一业务会话中途转为创建，以及普通业务、错字修改和可选项目规则。初次阻塞证据仍保留；当前结论见 [验证记录](../docs/validation.md)。
+
+- [native-cases.json](fixtures/activation/native-cases.json)：准确请求及全部虚构业务输入。
+- [native-results.json](results/activation/native-results.json)：逐例配置、成功入口读取事件、成本字段和结果。
+- [native-artifacts.json](results/activation/native-artifacts.json)：完整实际产物文本，仅供运行后的复核者读取。
+
+准备每个案例自己的项目和 output/。安装冻结版本的完整本包到 `.agents/skills/skill-improve/`，只把所选案例的 input_files 写到对应相对位置，向新会话发送其 prompt；不要把整个案例集或结果文件交给执行者。两个 integrated 案例还把 assets/agents-snippet.md 合并到各自项目的 AGENTS.md。真实项目已有规则时保留原内容；最初测试使用独立目录。
+
+context-create 是例外：先真实完成 context-business，再续接同一原生会话发送后续请求，不新建会话伪造历史。它只应继承这一业务会话，不继承 Skill Improve 的开发对话。
+
+本次真实请求 gpt-6.1-sol / medium、workspace-write、approval_policy=never；忽略用户配置后显式沿用本机既有 windows.sandbox=elevated，关闭记忆、额外 Agent 和网页搜索。五个一次性会话使用 ephemeral；业务续接会话需要保留。复现时按宿主支持和已有授权设置配置，不把这些本机参数当作任何电脑都能照用的通用要求。
+
+结束后核对成功读取事件、参考读取、磁盘成果及业务规则；错字案例应仅有指定替换，普通业务不应被扩成技能维护。名称、自述或进程退出码不代表完整自动调用。原始日志可能包含个人路径和其他宿主指导，公开前只保留本测试必要字段。
+
+执行期间没有提供答案或人工纠正；结果展示本包与宿主其他正常技能协作的行为，没有证明全部效果仅由本包造成。产物中的静态检查和示例推演，也不等于新业务 Skill 已完成独立模型验证。

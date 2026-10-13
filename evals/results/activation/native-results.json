@@ -1,0 +1,339 @@
+{
+  "source_version": "0.1.2",
+  "source_commit": "dcbacc3c41593431a6d955bca38acf7a1ff06607",
+  "turns": 7,
+  "sessions": 6,
+  "results": [
+    {
+      "case_id": "natural-improve",
+      "session": "natural-improve",
+      "requested_configuration": {
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "medium",
+        "sandbox": "workspace-write",
+        "windows_sandbox": "elevated",
+        "approval_policy": "never"
+      },
+      "elapsed_seconds": 219.99,
+      "process_exit": 0,
+      "usage_reported_by_host": {
+        "input_tokens": 141471,
+        "cached_input_tokens": 105472,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3149,
+        "reasoning_output_tokens": 227
+      },
+      "successful_full_entry_read_event_ids": [
+        "item_2"
+      ],
+      "reference_paths_read": [
+        "diagnose-and-rewrite.md",
+        "portability-and-maintenance.md"
+      ],
+      "nonzero_command_events": [
+        {
+          "event_id": "item_5",
+          "exit_code": 1
+        }
+      ],
+      "observed_entry_read": true,
+      "expected_entry_read": true,
+      "installed_package_unchanged": true,
+      "inputs_unchanged": true,
+      "typo_output_exact_match": null,
+      "unexpected_project_files": [],
+      "stderr_model_catalog_timeout": true,
+      "stderr_bytes": 2201,
+      "command_count": 6,
+      "item_types": [
+        "agent_message",
+        "command_execution",
+        "file_change"
+      ],
+      "memory_path_in_executed_commands": false,
+      "outcome_review": "Recovered confirmed release-summary rules from supplied notes: latest version before status filtering; newest same-time conflict stays pending; no fallback to an older verified version. Delivered the complete revised package and honest static-check record.",
+      "observed_case_result": "pass",
+      "nonzero_command_note": "item_5 ended with rg --files -g AGENTS.md and returned 1 for no matching file. Preceding reads succeeded; the executor continued and delivered without author intervention."
+    },
+    {
+      "case_id": "natural-create",
+      "session": "natural-create",
+      "requested_configuration": {
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "medium",
+        "sandbox": "workspace-write",
+        "windows_sandbox": "elevated",
+        "approval_policy": "never"
+      },
+      "elapsed_seconds": 286.59,
+      "process_exit": 0,
+      "usage_reported_by_host": {
+        "input_tokens": 179916,
+        "cached_input_tokens": 152320,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5264,
+        "reasoning_output_tokens": 394
+      },
+      "successful_full_entry_read_event_ids": [
+        "item_1"
+      ],
+      "reference_paths_read": [
+        "diagnose-and-rewrite.md",
+        "independent-validation.md",
+        "portability-and-maintenance.md"
+      ],
+      "nonzero_command_events": [],
+      "observed_entry_read": true,
+      "expected_entry_read": true,
+      "installed_package_unchanged": true,
+      "inputs_unchanged": true,
+      "typo_output_exact_match": null,
+      "unexpected_project_files": [],
+      "stderr_model_catalog_timeout": true,
+      "stderr_bytes": 4494,
+      "command_count": 4,
+      "item_types": [
+        "agent_message",
+        "command_execution",
+        "file_change"
+      ],
+      "memory_path_in_executed_commands": false,
+      "outcome_review": "Created a complete volunteer-reminder package with cutoff-first version selection, confirmed/date filtering, missing-ID and same-time-conflict handling, role grouping, examples, and no-send boundary. Independent business-model test is explicitly unverified.",
+      "observed_case_result": "pass"
+    },
+    {
+      "case_id": "natural-typo",
+      "session": "natural-typo",
+      "requested_configuration": {
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "medium",
+        "sandbox": "workspace-write",
+        "windows_sandbox": "elevated",
+        "approval_policy": "never"
+      },
+      "elapsed_seconds": 123.78,
+      "process_exit": 0,
+      "usage_reported_by_host": {
+        "input_tokens": 33692,
+        "cached_input_tokens": 16512,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 317,
+        "reasoning_output_tokens": 0
+      },
+      "successful_full_entry_read_event_ids": [],
+      "reference_paths_read": [],
+      "nonzero_command_events": [],
+      "observed_entry_read": false,
+      "expected_entry_read": false,
+      "installed_package_unchanged": true,
+      "inputs_unchanged": true,
+      "typo_output_exact_match": true,
+      "unexpected_project_files": [],
+      "stderr_model_catalog_timeout": true,
+      "stderr_bytes": 963,
+      "command_count": 1,
+      "item_types": [
+        "agent_message",
+        "command_execution"
+      ],
+      "memory_path_in_executed_commands": false,
+      "outcome_review": "Only the requested character replacement; output exactly matches the specified replacement. No Skill Improve entry read or full optimization.",
+      "observed_case_result": "pass"
+    },
+    {
+      "case_id": "context-business",
+      "session": "context-session",
+      "requested_configuration": {
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "medium",
+        "sandbox": "workspace-write",
+        "windows_sandbox": "elevated",
+        "approval_policy": "never"
+      },
+      "elapsed_seconds": 101.42,
+      "process_exit": 0,
+      "usage_reported_by_host": {
+        "input_tokens": 51388,
+        "cached_input_tokens": 43520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 490,
+        "reasoning_output_tokens": 0
+      },
+      "successful_full_entry_read_event_ids": [],
+      "reference_paths_read": [],
+      "nonzero_command_events": [],
+      "observed_entry_read": false,
+      "expected_entry_read": false,
+      "installed_package_unchanged": true,
+      "inputs_unchanged": true,
+      "typo_output_exact_match": null,
+      "unexpected_project_files": [],
+      "stderr_model_catalog_timeout": true,
+      "stderr_bytes": 753,
+      "command_count": 2,
+      "item_types": [
+        "agent_message",
+        "command_execution"
+      ],
+      "memory_path_in_executed_commands": false,
+      "outcome_review": "Delivered the requested business brief: confirmed I01 then I03; I02 and I05 pending; I04 excluded; facts and suggestions distinguished. No Skill Improve entry read.",
+      "observed_case_result": "pass"
+    },
+    {
+      "case_id": "context-create",
+      "session": "context-session",
+      "requested_configuration": {
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "medium",
+        "sandbox": "workspace-write",
+        "windows_sandbox": "elevated",
+        "approval_policy": "never"
+      },
+      "elapsed_seconds": 111.72,
+      "process_exit": 0,
+      "usage_reported_by_host": {
+        "input_tokens": 226291,
+        "cached_input_tokens": 175872,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3915,
+        "reasoning_output_tokens": 155
+      },
+      "successful_full_entry_read_event_ids": [
+        "item_1"
+      ],
+      "reference_paths_read": [
+        "diagnose-and-rewrite.md",
+        "independent-validation.md",
+        "portability-and-maintenance.md"
+      ],
+      "nonzero_command_events": [],
+      "observed_entry_read": true,
+      "expected_entry_read": true,
+      "installed_package_unchanged": true,
+      "inputs_unchanged": true,
+      "typo_output_exact_match": null,
+      "unexpected_project_files": [],
+      "stderr_model_catalog_timeout": false,
+      "stderr_bytes": 158,
+      "command_count": 4,
+      "item_types": [
+        "agent_message",
+        "command_execution"
+      ],
+      "memory_path_in_executed_commands": false,
+      "outcome_review": "In the real resumed business session, proactively loaded Skill Improve and created issue-brief with original guidelines, sample, and brief. Original files copied intact; unknown-state handling marked as a conservative addition. Did not mislabel the prior in-chat sample as independent testing.",
+      "observed_case_result": "pass"
+    },
+    {
+      "case_id": "integrated-create",
+      "session": "integrated-create",
+      "requested_configuration": {
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "medium",
+        "sandbox": "workspace-write",
+        "windows_sandbox": "elevated",
+        "approval_policy": "never"
+      },
+      "elapsed_seconds": 155.85,
+      "process_exit": 0,
+      "usage_reported_by_host": {
+        "input_tokens": 173798,
+        "cached_input_tokens": 121216,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4244,
+        "reasoning_output_tokens": 196
+      },
+      "successful_full_entry_read_event_ids": [
+        "item_1"
+      ],
+      "reference_paths_read": [
+        "diagnose-and-rewrite.md",
+        "independent-validation.md",
+        "portability-and-maintenance.md"
+      ],
+      "nonzero_command_events": [],
+      "observed_entry_read": true,
+      "expected_entry_read": true,
+      "installed_package_unchanged": true,
+      "inputs_unchanged": true,
+      "typo_output_exact_match": null,
+      "unexpected_project_files": [],
+      "stderr_model_catalog_timeout": false,
+      "stderr_bytes": 158,
+      "command_count": 5,
+      "item_types": [
+        "agent_message",
+        "command_execution",
+        "file_change"
+      ],
+      "memory_path_in_executed_commands": false,
+      "outcome_review": "With the published project rule installed, proactively read Skill Improve and created the full volunteer package preserving the supplied rules and relevant examples. Did not request a repeated model selection or launch extra model tests.",
+      "observed_case_result": "pass"
+    },
+    {
+      "case_id": "integrated-typo",
+      "session": "integrated-typo",
+      "requested_configuration": {
+        "requested_model": "gpt-6.1-sol",
+        "requested_effort": "medium",
+        "sandbox": "workspace-write",
+        "windows_sandbox": "elevated",
+        "approval_policy": "never"
+      },
+      "elapsed_seconds": 16.97,
+      "process_exit": 0,
+      "usage_reported_by_host": {
+        "input_tokens": 34354,
+        "cached_input_tokens": 16768,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 320,
+        "reasoning_output_tokens": 0
+      },
+      "successful_full_entry_read_event_ids": [],
+      "reference_paths_read": [],
+      "nonzero_command_events": [],
+      "observed_entry_read": false,
+      "expected_entry_read": false,
+      "installed_package_unchanged": true,
+      "inputs_unchanged": true,
+      "typo_output_exact_match": true,
+      "unexpected_project_files": [],
+      "stderr_model_catalog_timeout": false,
+      "stderr_bytes": 158,
+      "command_count": 1,
+      "item_types": [
+        "agent_message",
+        "command_execution"
+      ],
+      "memory_path_in_executed_commands": false,
+      "outcome_review": "With the same project rule installed, made exactly the requested character replacement, without loading Skill Improve or starting full optimization.",
+      "observed_case_result": "pass"
+    }
+  ],
+  "usage_totals": {
+    "input_tokens": 840910,
+    "cached_input_tokens": 631680,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 17699,
+    "reasoning_output_tokens": 972
+  },
+  "summed_process_seconds": 1016.32,
+  "project_guide_diagnostic": {
+    "tool": "codex debug prompt-input",
+    "observed_own_rule_start_marker": true,
+    "observed_own_rule_body": true,
+    "installed_snippet_matches_published_bytes": true,
+    "scope": "Separate read-only rendering for the same integrated-create project with normal user config. Not the captured prompt of the executed model turn and not causal proof of the rule effect. Raw host prompt remains private."
+  },
+  "evidence_boundary": [
+    "Codex CLI 0.160.1 on Windows; arguments request gpt-6.1-sol / medium. No service-side model identity was returned.",
+    "Seven task turns in six native sessions; the contextual creation turn resumed its actual business session. No Skill Improve authoring conversation or grading answer was supplied.",
+    "Normal host/global instructions and available skills remained; this is not an empty system or a single-skill ablation.",
+    "Memory and extra-agent features and web search disabled by request arguments. Filesystem read boundaries were instructed, not an OS-denied read jail. No user-memory path appeared in executed commands.",
+    "Four positive turns read the entire Skill Improve entry successfully and produced reviewed artifacts. Three negative turns completed their small/business task without full improvement.",
+    "Targets and effort were supplied where model adaptation mattered; repeated model-choice questions were not observed. Missing-configuration behavior was not tested.",
+    "No author assistance or answer supplementation during individual runs. Developer review happened after completion. Each turn ran once; earlier blocked attempt remains separately archived.",
+    "This validates automatic selection and task execution for Skill Improve in these cases. Resulting business skills have not received new independent business-model validation.",
+    "Output quality is based on artifact review against supplied requirements, not only tool exit status. No stable success rate, cross-host guarantee, unique causal gain, or savings claim follows from these cases."
+  ]
+}
