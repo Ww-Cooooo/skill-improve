@@ -1,0 +1,7 @@
+interface:
+  display_name: "Skill Improve｜技能改进"
+  short_description: "补齐创建中或已有技能的隐含方法，让后续模型脱离开发背景也能执行"
+  default_prompt: "使用 $skill-improve 检查当前创建或改进中的 Skill，补齐独立执行所需的方法，保留原意并按实际条件验证。"
+
+policy:
+  allow_implicit_invocation: true

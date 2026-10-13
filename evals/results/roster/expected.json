@@ -1,0 +1,59 @@
+{
+  "A": {
+    "confirmed": 2,
+    "held": 1,
+    "waiting": 1,
+    "occupied": 3,
+    "capacity_status": "已满",
+    "current_events": [
+      "E05",
+      "E06",
+      "E07",
+      "E18"
+    ],
+    "cancelled": [
+      "E03"
+    ]
+  },
+  "B": {
+    "confirmed": 2,
+    "held": 1,
+    "waiting": 1,
+    "occupied": 3,
+    "capacity_status": "超额",
+    "current_events": [
+      "E08",
+      "E09",
+      "E11",
+      "E19"
+    ]
+  },
+  "C": {
+    "confirmed": 1,
+    "held": 0,
+    "waiting": 0,
+    "occupied": 1,
+    "capacity_status": "容量未知",
+    "current_events": [
+      "E14"
+    ]
+  },
+  "uncertain": [
+    [
+      "E12",
+      "E13"
+    ],
+    [
+      "E15"
+    ],
+    [
+      "E17"
+    ]
+  ],
+  "future": [
+    "E10",
+    "E16"
+  ],
+  "side_effects": "no external notifications or record mutations",
+  "evidence_boundary": "one synthetic task; not a reliability estimate"
+}

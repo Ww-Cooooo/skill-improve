@@ -1,0 +1,153 @@
+{
+  "cutoff": "2026-04-07T18:00:00Z",
+  "sessions": [
+    {
+      "id": "A",
+      "capacity": 3
+    },
+    {
+      "id": "B",
+      "capacity": 2
+    },
+    {
+      "id": "C",
+      "capacity": null
+    }
+  ],
+  "events": [
+    {
+      "event_id": "E01",
+      "participant_id": "P1",
+      "session_id": "A",
+      "at": "2026-04-07T10:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E16",
+      "participant_id": "P3",
+      "session_id": "A",
+      "at": "2026-04-07T19:00:00Z",
+      "action": "cancel"
+    },
+    {
+      "event_id": "E02",
+      "participant_id": "P1",
+      "session_id": "A",
+      "at": "2026-04-07T11:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E03",
+      "participant_id": "P1",
+      "session_id": "A",
+      "at": "2026-04-07T17:00:00Z",
+      "action": "cancel"
+    },
+    {
+      "event_id": "E04",
+      "participant_id": "P2",
+      "session_id": "A",
+      "at": "2026-04-07T12:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E05",
+      "participant_id": "P2",
+      "session_id": "A",
+      "at": "2026-04-07T13:00:00Z",
+      "action": "confirmed",
+      "note": "口头估计本场已有10人"
+    },
+    {
+      "event_id": "E06",
+      "participant_id": "P3",
+      "session_id": "A",
+      "at": "2026-04-07T14:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E07",
+      "participant_id": "P4",
+      "session_id": "A",
+      "at": "2026-04-07T15:00:00Z",
+      "action": "waiting"
+    },
+    {
+      "event_id": "E08",
+      "participant_id": "P1",
+      "session_id": "B",
+      "at": "2026-04-07T16:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E09",
+      "participant_id": "P5",
+      "session_id": "B",
+      "at": "2026-04-07T17:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E10",
+      "participant_id": "P5",
+      "session_id": "B",
+      "at": "2026-04-07T19:00:00Z",
+      "action": "cancel"
+    },
+    {
+      "event_id": "E11",
+      "participant_id": "P6",
+      "session_id": "B",
+      "at": "2026-04-07T18:00:00Z",
+      "action": "waiting"
+    },
+    {
+      "event_id": "E12",
+      "participant_id": "P7",
+      "session_id": "B",
+      "at": "2026-04-07T17:30:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E13",
+      "participant_id": "P7",
+      "session_id": "B",
+      "at": "2026-04-07T17:30:00Z",
+      "action": "cancel"
+    },
+    {
+      "event_id": "E14",
+      "participant_id": "P8",
+      "session_id": "C",
+      "at": "2026-04-07T16:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E15",
+      "participant_id": null,
+      "session_id": "A",
+      "at": "2026-04-07T16:00:00Z",
+      "action": "confirmed"
+    },
+    {
+      "event_id": "E17",
+      "participant_id": "P9",
+      "session_id": "A",
+      "at": "2026-04-07T16:30:00Z",
+      "action": "interested"
+    },
+    {
+      "event_id": "E18",
+      "participant_id": "P10",
+      "session_id": "A",
+      "at": "2026-04-07T16:00:00Z",
+      "action": "held"
+    },
+    {
+      "event_id": "E19",
+      "participant_id": "P11",
+      "session_id": "B",
+      "at": "2026-04-07T16:30:00Z",
+      "action": "held"
+    }
+  ]
+}

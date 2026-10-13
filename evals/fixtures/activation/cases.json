@@ -1,0 +1,42 @@
+[
+  {
+    "id": "creation-start",
+    "request": "请把我们已确认的周报整理方法做成一个可复用 Skill。",
+    "state": "创建任务已经授权；尚未产生任何技能草稿，可使用 skill-creator。"
+  },
+  {
+    "id": "creation-midtask",
+    "request": "继续。",
+    "state": "同一任务此前已获准创建一个报名简报 Skill。Agent 刚产出第一份可读草稿，准备向用户交付；用户没有点名改进工具。"
+  },
+  {
+    "id": "maintenance",
+    "request": "这个 Skill 在另一个模型的新对话里执行经常漏掉约束，帮我修好。",
+    "state": "已有完整技能包、失败产物和开发说明；没有指定最终实测型号。"
+  },
+  {
+    "id": "ordinary-business-fault",
+    "request": "使用现有报名 Skill 给我生成今天的简报。",
+    "state": "业务执行时发现技能只写了“按上次口径”，导致无法决定预留席位如何统计。用户没有授权修改全局技能。"
+  },
+  {
+    "id": "small-fix",
+    "request": "只把这个 Skill 中参考文件链接的大小写改正确，其他内容保持不动。",
+    "state": "已确认是一个链接拼写错误，目标文件存在。"
+  },
+  {
+    "id": "ongoing-improvement",
+    "request": "把刚才那处输入字段说明补清楚。",
+    "state": "同一目标 Skill 已经处于 Skill Improve 的改进流程中。Agent 完成了诊断，并调用创建工具核查结构；现在准备继续当前局部修订。"
+  },
+  {
+    "id": "ordinary-use",
+    "request": "用这个已经安装好的简报 Skill 完成这份报名统计。",
+    "state": "没有出现技能方法、工具或数据问题；任务只是产出业务简报。"
+  },
+  {
+    "id": "installation",
+    "request": "将这个 Skill 包复制到指定技能目录，保留原内容。",
+    "state": "目标目录不存在，只需安装；用户没有请求改进技能。"
+  }
+]
