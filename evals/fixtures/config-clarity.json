@@ -1,0 +1,36 @@
+{
+  "note": "Fictional inputs. Only supply the selected task or selected scenarios to an executor; results and grading observations are separate. Models A/B are hypothetical scenario labels, not real models used by a simulated host.",
+  "static_execution": {
+    "prompt": "请完善 drafts/faq-reply.md，把 drafts/requirements.md 的已确认要求落实成可独立使用的完整技能包，写入 output/faq-reply/，同时保存简短检查记录。这次只改说明并做静态检查，不安排模型实测；未来使用的模型还没选定。保留原意，完成后简洁汇报。\n",
+    "input_files": {
+      "drafts/faq-reply.md": "---\nname: faq-reply\ndescription: 根据随任务提供的知识库回答客户常见问题，输出供客服审核的草稿。\n---\n# FAQ 回复\n阅读问题和知识库，按之前的规则给出准确答复，缺信息时处理好，不要乱编。\n",
+      "drafts/requirements.md": "# 已确认要求（虚构）\n用户每次提供问题列表与知识库文档；不存在默认在线知识库。每个问题保留原编号，答案只能依据知识库中能指向具体小节的内容，草稿旁标明对应小节标题。知识库没有答案时，标为待客服核实，不用常识猜产品能力、价格或承诺。问题自身缺少决定答案的条件时，写出需要客户补充的具体信息；不同问题互不阻塞。相互矛盾的知识库条款需要客服决定，不能挑一个当真。输出是客服审核的回复草稿，不发送给客户。未来用户提供输入文件位置，技能不依赖当前目录或聊天。\n"
+    }
+  },
+  "reader_scenarios": [
+    {
+      "id": "known-config",
+      "situation": "用户此前已确认本轮验证使用模型 A / medium；宿主可调用并可建立不带开发历史的执行上下文，相关调用在已有授权内。现在用户说：验证这份 Skill 离开开发对话后的表现，开始吧。"
+    },
+    {
+      "id": "context-only",
+      "situation": "用户仅要求验证 Skill 在新对话中能否工作，没有提出适配低成本或特定型号的要求。当前宿主元数据和可调用配置均为模型 A / medium，能建立独立上下文，测试已获授权；未来正式执行模型未指定。"
+    },
+    {
+      "id": "cheap-target-missing",
+      "situation": "用户要求证明便宜模型也能执行，未说日常准备用哪个型号和档位。已有材料查不到目标；当前维护会话用模型 A / high，但不能从中推断用户的低成本选择。技能改写与静态检查仍可进行。"
+    },
+    {
+      "id": "specified-unavailable",
+      "situation": "用户已指定模型 B / medium，宿主只能调用模型 A；用户要求先交付当前能完成的包改进与检查，不要让自己切换环境。没有授权用 A 替换 B，也没有要求现在必须拿到 B 的实测结果。"
+    },
+    {
+      "id": "manual-handoff",
+      "situation": "用户固定要用模型 B / medium，并要求本轮拿到独立执行结果，不接受替代型号。宿主无法替用户创建该型号的新会话；用户界面可以选择它。技能包和正常业务测试输入可准备，尚未交给用户；任务没有其他权限或数据障碍。"
+    }
+  ],
+  "affected_scenarios_rechecked": [
+    "cheap-target-missing",
+    "manual-handoff"
+  ]
+}

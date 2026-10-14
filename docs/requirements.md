@@ -17,6 +17,7 @@
 | 正确触发、相邻负例、缺信息默认/询问/停止/部分完成 | SKILL.md 第 4、5 节；portability-and-maintenance |
 | 当前用户要求覆盖默认做法，遵守宿主有效指令 | SKILL.md 第 4 节 |
 | 真实目标型号、思考档位、宿主工具，区分配置请求和实际可观察证据 | independent-validation 的执行配置 |
+| 优先自行获取已有条件；区分未指定目标与指定目标不可用；只询问实际缺项，分清用户决定、用户操作和 Agent 自行工作 | SKILL.md 开始信息；independent-validation 的配置与用户参与分支 |
 | 维护时可用开发背景，业务执行测试时不带额外作者知识 | SKILL.md 工作位置；independent-validation 的隔离材料 |
 | 新任务迁移、必要的有无 Skill 或新旧版本对照 | independent-validation 的任务与对照 |
 | 作者提示、失败、重试必须保留；重要或波动结果针对性复测 | SKILL.md 第 6 节；independent-validation |
