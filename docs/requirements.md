@@ -5,6 +5,9 @@
 | 确认要求及细节 | 落实位置 |
 | --- | --- |
 | 创建草稿交付前及后续改进时补全 Skill，减少对强模型补全和开发背景的依赖 | SKILL.md 的目的、工作位置与主流程 |
+| 以忠实交接原方法和质量为主线，不降低要求、删掉必要能力或用通用修错代替交接 | SKILL.md 的主线、第 1—3、7 节；diagnose-and-rewrite 的改动分类 |
+| 实质补全对应原位置、原意依据、需猜内容、补充来源与保留效果；未知意图定向澄清，有依据部分继续 | SKILL.md 第 2—3 节；diagnose-and-rewrite 的原意对齐；improvement-record 模板 |
+| 分开验证改写忠实与核心业务独立执行，维护成功不等于业务质量复现；保留原有有效能力 | SKILL.md 第 5、7 节；independent-validation 的两层检查；worked-examples 例五、六 |
 | 根据实际工作阶段主动介入，覆盖中途进入技能工作；防误触发、反复加载、循环调用和默认全量评测 | SKILL.md 使用条件；入口 description；portability-and-maintenance 的触发检查 |
 | 分开解决安装发现、任务选择与实际执行；公开提供可选项目检查点，保留原规则及安装定制 | docs/integration.md；assets/agents-snippet.md；portability-and-maintenance |
 | 先确认方法有效，再验证别人能复现；区分事实、用户要求、假设、例子 | SKILL.md 第 1 节；diagnose-and-rewrite 的方法依据 |
